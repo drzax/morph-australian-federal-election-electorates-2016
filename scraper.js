@@ -36,7 +36,9 @@ url('http://www.abc.net.au/news/federal-election-2016/guide/candidates/')
 	.then((html) => {
 		var $;
 		$ = cheerio.load(html);
-		$('#candidatestable tbody tr').each(function() {
+		$('#candidatestable tbody tr').filter(function(){
+			return $(this).find('.candidate').text().indexOf('Retiring MP') === -1;
+		}).each(function() {
 			var $tr, data, electorateCodeMatch;
 			$tr = $(this);
 			data = {};
