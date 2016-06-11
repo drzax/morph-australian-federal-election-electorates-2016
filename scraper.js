@@ -38,7 +38,7 @@ url('http://www.abc.net.au/news/federal-election-2016/guide/electorates/')
 
 			electorateCodeMatch = $tr.find('.electorate a').attr('href').match(/([a-z]+)\/$/);
 
-			data.$partyCode = $tr.find('.party span').text().trim().split(' ')[0].toLowerCase();
+			data.$partyCode = $tr.find('.party').text().trim().split(' ')[0].toLowerCase();
 			// data.$partyName = $tr.find('.party span').attr('title').trim();
 			data.$electorateName = $tr.find('.electorate a').text().replace('(*)','').trim();
 			data.$electorateCode = (electorateCodeMatch) ? electorateCodeMatch[1] : null;
