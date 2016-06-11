@@ -1,5 +1,5 @@
-Australian federal election candidates 2016
-===========================================
+Australian federal election electorates 2016
+============================================
 
 According to the ABC's website.
 

@@ -4,8 +4,8 @@
     "request": "latest",
     "sqlite3": "latest"
   },
-  "name": "morph-australian-federal-election-candidates-2016",
-  "description": "Scrapes the ABC's website for Australian federal election candidates in 2016 election",
+  "name": "morph-australian-federal-election-electorates-2016",
+  "description": "Scrapes the ABC's website for Australian federal election electorates in 2016",
   "version": "1.0.0",
   "main": "scraper.js",
   "devDependencies": {},
@@ -14,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/drzax/morph-australian-federal-election-candidates-2016.git"
+    "url": "git+https://github.com/drzax/morph-australian-federal-election-electorates-2016.git"
   },
   "keywords": [
     "scraper",
     "data",
     "politics",
     "australia",
-    "candidates"
+    "electorates"
   ],
   "engines": {
     "node": "5.8.0",
@@ -30,7 +30,7 @@
   "author": "Simon Elvery",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/drzax/morph-australian-federal-election-candidates-2016/issues"
+    "url": "https://github.com/drzax/morph-australian-federal-election-electorates-2016/issues"
   },
-  "homepage": "https://github.com/drzax/morph-australian-federal-election-candidates-2016#readme"
+  "homepage": "https://github.com/drzax/morph-australian-federal-election-electorates-2016#readme"
 }
