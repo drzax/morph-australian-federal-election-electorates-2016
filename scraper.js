@@ -22,7 +22,8 @@ db = new Promise((resolve, reject) => {
 					electorateCode TEXT,
 					electorateState TEXT,
 					electorateName TEXT,
-					margin REAL
+					margin REAL,
+					partyStatusChanged INTEGER
 				)`, (err) => err ? reject(err) : resolve(conn));
 	});
 });
@@ -44,9 +45,10 @@ url('http://www.abc.net.au/news/federal-election-2016/guide/electorates/')
 			data.$electorateCode = (electorateCodeMatch) ? electorateCodeMatch[1] : null;
 			data.$electorateState = $tr.find('.electorate').text().replace('(*)','').match(/\((.+)\)/)[1];
 			data.$margin = $tr.find('.margin').text().trim();
+			data.$partyStatusChanged = $tr.find('.electorate a').text().indexOf('(*)') > -1;
 
 			db.then(function(db) {
-				db.run("INSERT INTO data (partyCode, electorateCode, electorateState, electorateName, margin) VALUES ($partyCode, $electorateCode, $electorateState, $electorateName, $margin)", data, (global.gc) ? global.gc : null);
+				db.run("INSERT INTO data (partyCode, electorateCode, electorateState, electorateName, margin, partyStatusChanged) VALUES ($partyCode, $electorateCode, $electorateState, $electorateName, $margin, $partyStatusChanged)", data, (global.gc) ? global.gc : null);
 			}, handleErr);
 
 		});
